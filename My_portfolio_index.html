@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caleb Nwachukwu | Analytics Portfolio</title>
+<meta name="description" content="Professional portfolio of Caleb Nwachukwu, showcasing data analytics, business intelligence, financial analysis and predictive modelling projects.">
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  color: #243247;
+  line-height: 1.7;
+}
+
+header {
+  background: #14243c;
+  color: white;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo { font-size: 20px; font-weight: bold; }
+
+nav { display: flex; flex-wrap: wrap; gap: 22px; }
+
+nav a {
+  color: #d9e2ef;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover { color: #65c9b7; }
+
+.hero {
+  background: #14243c;
+  color: white;
+  padding: 95px 8% 105px;
+}
+
+.hero-label {
+  color: #65c9b7;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 6vw, 58px);
+  line-height: 1.15;
+  max-width: 780px;
+  margin: 22px 0;
+}
+
+.hero p {
+  max-width: 700px;
+  color: #c7d2e0;
+  font-size: 17px;
+}
+
+.buttons { display: flex; gap: 14px; margin-top: 30px; flex-wrap: wrap; }
+
+.btn {
+  display: inline-block;
+  padding: 12px 21px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.primary { background: #65c9b7; color: #14243c; }
+.secondary { border: 1px solid #a5b5c8; color: white; }
+
+section { padding: 70px 8%; }
+
+.about { background: white; }
+
+.heading { margin-bottom: 30px; }
+
+.heading h2 { font-size: 29px; color: #14243c; margin-bottom: 8px; }
+
+.heading p { color: #718096; max-width: 720px; }
+
+.about-copy { max-width: 850px; }
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.skill {
+  background: #e5f2ef;
+  color: #24675d;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.category { margin-bottom: 40px; }
+
+.category h3 {
+  color: #247c70;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 22px;
+}
+
+.project-card {
+  background: white;
+  border: 1px solid #e4eaf0;
+  border-radius: 9px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 9px 24px rgba(20,36,60,.08);
+}
+
+.project-card h4 {
+  color: #172b45;
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 12px 0;
+}
+
+.project-card p {
+  color: #69778a;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.number {
+  color: #198b7a;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 20px; }
+
+.tags span {
+  background: #f0f3f7;
+  color: #526174;
+  padding: 4px 9px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.project-link {
+  color: #087e70;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: auto;
+}
+
+.project-link:hover { text-decoration: underline; }
+
+.featured {
+  border-top: 4px solid #65b9a9;
+}
+
+.coming-soon {
+  background: #edf1f5;
+  border: 1px dashed #aab6c5;
+}
+
+.contact {
+  background: #eaf0f6;
+  text-align: center;
+}
+
+.contact p { color: #66758a; margin: 12px auto 25px; max-width: 650px; }
+
+.contact a {
+  color: #087e70;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 12px;
+}
+
+footer {
+  background: #14243c;
+  color: #bac6d5;
+  text-align: center;
+  padding: 23px;
+  font-size: 13px;
+}
+
+@media(max-width:600px) {
+  header { padding: 20px 6%; }
+  .hero { padding: 70px 6%; }
+  section { padding: 55px 6%; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Caleb Nwachukwu</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-label">Data Analytics | Business Intelligence | Financial Analysis</div>
+  <h1>Turning Data Into Meaningful Insights.</h1>
+  <p>
+    I am an MSc Artificial Intelligence and Data Science graduate
+    interested in applying analytical methods to business, financial
+    and operational challenges. My work combines data preparation,
+    exploratory analysis, statistical modelling and visualisation
+    to uncover patterns and support informed decisions.
+  </p>
+  <div class="buttons">
+    <a href="#projects" class="btn primary">Explore My Projects</a>
+    <a href="https://github.com/Ncc22-fx" target="_blank" rel="noopener" class="btn secondary">GitHub Profile</a>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <div class="heading"><h2>About Me</h2></div>
+  <div class="about-copy">
+    <p>
+      My academic background in Artificial Intelligence and Data Science,
+      combined with experience in operations and business support,
+      has developed my interest in using data to understand performance,
+      investigate problems and identify opportunities for improvement.
+    </p>
+    <p style="margin-top:15px">
+      I work with structured datasets, analytical tools and predictive
+      techniques to prepare information, investigate trends and communicate
+      findings. This portfolio presents selected projects demonstrating
+      my technical capabilities and approach to practical analytical problems.
+    </p>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="heading">
+    <h2>Technical Skills</h2>
+    <p>Tools and methods applied across my analytical work.</p>
+  </div>
+  <div class="skills">
+    <span class="skill">Python</span>
+    <span class="skill">SQL</span>
+    <span class="skill">Excel</span>
+    <span class="skill">Power BI</span>
+    <span class="skill">Pandas</span>
+    <span class="skill">NumPy</span>
+    <span class="skill">Scikit-learn</span>
+    <span class="skill">Matplotlib</span>
+    <span class="skill">Data Cleaning</span>
+    <span class="skill">Exploratory Data Analysis</span>
+    <span class="skill">Data Visualisation</span>
+    <span class="skill">Statistical Analysis</span>
+    <span class="skill">Machine Learning</span>
+    <span class="skill">Natural Language Processing</span>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="heading">
+    <h2>Selected Projects</h2>
+    <p>
+      A selection of projects demonstrating data preparation,
+      business reporting, analytical investigation and predictive modelling.
+    </p>
+  </div>
+
+  <div class="category">
+    <h3>Business Intelligence & Performance Reporting</h3>
+    <div class="projects-grid">
+      <article class="project-card featured">
+        <div class="number">PROJECT 01</div>
+        <h4>Executive Business Overview</h4>
+        <p>
+          An interactive business performance dashboard exploring
+          revenue, profitability, sales performance, customer metrics
+          and key performance indicators through executive-level reporting.
+        </p>
+        <div class="tags">
+          <span>Business Intelligence</span>
+          <span>HTML</span>
+          <span>JavaScript</span>
+          <span>DAX documentation</span>
+        </div>
+        <a class="project-link" href="https://github.com/Ncc22-fx/Executive-business-overview" target="_blank" rel="noopener">Explore Project →</a>
+      </article>
+
+      <article class="project-card coming-soon">
+        <div class="number">ADDITIONAL PROJECT</div>
+        <h4>Power BI Business Intelligence Dashboard</h4>
+        <p>
+          A dedicated space for my Power BI report, including
+          dashboard screenshots, analytical findings and the
+          downloadable report where appropriate.
+        </p>
+        <div class="tags"><span>Power BI</span><span>DAX</span><span>Reporting</span></div>
+        <span class="project-link">Coming soon</span>
+      </article>
+    </div>
+  </div>
+
+  <div class="category">
+    <h3>Data Analytics & Data Preparation</h3>
+    <div class="projects-grid">
+      <article class="project-card">
+        <div class="number">PROJECT 02</div>
+        <h4>Customer Data Preprocessing & Exploratory Analysis</h4>
+        <p>
+          A Python project focused on data preparation and exploratory
+          analysis, including manual data handling without relying on Pandas
+          for preprocessing.
+        </p>
+        <div class="tags"><span>Python</span><span>Data Cleaning</span><span>EDA</span></div>
+        <a class="project-link" href="https://github.com/Ncc22-fx/Customer-Data-Preprocessing-and-Exploratory-Analysis-Without-Pandas-" target="_blank" rel="noopener">Explore Project →</a>
+      </article>
+
+      <article class="project-card">
+        <div class="number">PROJECT 03</div>
+        <h4>Population Census & Demographic Analysis</h4>
+        <p>
+          An investigation of population and demographic data using
+          Python to explore distributions, patterns and trends
+          within the dataset.
+        </p>
+        <div class="tags"><span>Python</span><span>Pandas</span><span>NumPy</span><span>Visualisation</span></div>
+        <a class="project-link" href="https://github.com/Ncc22-fx/Population-Census-Data-Analysis" target="_blank" rel="noopener">Explore Project →</a>
+      </article>
+    </div>
+  </div>
+
+  <div class="category">
+    <h3>Predictive & Statistical Analytics</h3>
+    <div class="projects-grid">
+      <article class="project-card">
+        <div class="number">PROJECT 04</div>
+        <h4>Car Price Prediction</h4>
+        <p>
+          A predictive modelling project investigating the relationship
+          between vehicle characteristics and prices using regression
+          and machine learning techniques.
+        </p>
+        <div class="tags"><span>Python</span><span>Regression</span><span>Random Forest</span><span>Machine Learning</span></div>
+        <a class="project-link" href="https://github.com/Ncc22-fx/Car-Price-Prediction" target="_blank" rel="noopener">Explore Project →</a>
+      </article>
+
+      <article class="project-card">
+        <div class="number">PROJECT 05</div>
+        <h4>UK Road Accident Forecasting</h4>
+        <p>
+          A time-series analysis project investigating historical
+          road accident patterns and applying forecasting methods
+          to examine accident trends.
+        </p>
+        <div class="tags"><span>Python</span><span>Time Series</span><span>ARIMA</span><span>SARIMA</span></div>
+        <a class="project-link" href="https://github.com/Ncc22-fx/Advanced-Analytics-Project-UK-Accident-Forecasting-Social-Network-Analysis" target="_blank" rel="noopener">Explore Repository →</a>
+      </article>
+    </div>
+  </div>
+
+  <div class="category">
+    <h3>Advanced Analytics</h3>
+    <div class="projects-grid">
+      <article class="project-card">
+        <div class="number">PROJECT 06</div>
+        <h4>IMDb Movie Review Sentiment Analysis</h4>
+        <p>
+          A natural language processing project examining movie review
+          text and applying machine learning and deep learning
+          approaches to sentiment classification.
+        </p>
+        <div class="tags"><span>Python</span><span>NLP</span><span>TF-IDF</span><span>Deep Learning</span></div>
+        <a class="project-link" href="https://github.com/Ncc22-fx/IMDb-Movie-Review-Sentiment-Analysis-NLP-Project-" target="_blank" rel="noopener">Explore Project →</a>
+      </article>
+
+      <article class="project-card">
+        <div class="number">PROJECT 07</div>
+        <h4>Social Network Analysis</h4>
+        <p>
+          A network analysis investigation exploring relationships
+          and connections using graph-based analytical techniques.
+        </p>
+        <div class="tags"><span>Python</span><span>NetworkX</span><span>Graph Analysis</span></div>
+        <a class="project-link" href="https://github.com/Ncc22-fx/Advanced-Analytics-Project-UK-Accident-Forecasting-Social-Network-Analysis" target="_blank" rel="noopener">Explore Repository →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="heading"><h2>Let's Connect</h2></div>
+  <p>
+    Thank you for taking the time to explore my work.
+    I welcome opportunities to connect with professionals
+    and organisations working with data, analytics and business improvement.
+  </p>
+  <a href="https://github.com/Ncc22-fx" target="_blank" rel="noopener">GitHub</a>
+  <a href="https://www.linkedin.com/in/caleb-nwachukwu-a958a9184/" target="_blank" rel="noopener">LinkedIn</a>
+</section>
+
+<footer>
+  © 2026 Caleb Nwachukwu | Professional Analytics Portfolio
+</footer>
+
+</body>
+</html>
